@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_elephant/models/elephant.dart';
 import 'package:flutter_elephant/views/view_elephant.dart';
 import 'package:get/get.dart';
+import 'package:connectivity/connectivity.dart';
+import 'package:adaptive_dialog/adaptive_dialog.dart';
 
 class ElephantCard extends StatelessWidget {
   final Elephant elephant;
@@ -11,6 +13,7 @@ class ElephantCard extends StatelessWidget {
     required this.elephant,
     required this.context2
   });
+
   @override
   Widget build(BuildContext context) {
     return Container(
