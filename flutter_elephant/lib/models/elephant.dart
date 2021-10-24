@@ -58,11 +58,11 @@ class Elephant {
     return data;
   }
 
-  static List<Elephant> elephants(List snapshot){
-    return snapshot.map(
-      (data){
-        return Elephant.fromJson(data);
-      }
-    ).toList();
-  }
+  // static List<Elephant> elephants(List snapshot){
+  //   return snapshot.map(
+  //     (data){
+  //       return Elephant.fromJson(data);
+  //     }
+  //   ).toList();
+  // }
 }

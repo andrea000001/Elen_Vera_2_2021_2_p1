@@ -12,22 +12,18 @@ class ElephantApi {
       'accept': 'application/json',
     });
 
-    // print(response.body);
-
-    var body = response.body;
+    List<Elephant> _elephants = [];
 
     var decodedJson = jsonDecode(response.body);
-
-    List _elephants = [];
 
      if (decodedJson != null) {
        for (var i in decodedJson) {
          if(i.length == 12){
-            _elephants.add(i);
+            _elephants.add(Elephant.fromJson(i));
          }        
        }
      }
      
-    return Elephant.elephants(_elephants);
+    return _elephants;
   }
 }
